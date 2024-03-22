@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.plaf.metal.MetalBorders;
 import javax.swing.JInternalFrame;
 import java.awt.Rectangle;
 import javax.swing.JScrollPane;
@@ -55,6 +56,10 @@ public class GUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 736, 537);
 		
+		JPanel panel = new JPanel();
+		panel.setLayout(new BorderLayout());
+		setContentPane(panel);
+	
 		
 		JMenuBar menuLeiste = new JMenuBar();
 		setJMenuBar(menuLeiste);
@@ -80,42 +85,60 @@ public class GUI extends JFrame {
 		JMenu mnNewMenu_2 = new JMenu("Help");
 		menuLeiste.add(mnNewMenu_2);
 		
-		JButton buttonNB = new JButton("Notizblock");
-		menuLeiste.add(buttonNB);
 		
 		JButton buttonHS = new JButton("Haupseite ");
 		menuLeiste.add(buttonHS);
+		
+		JButton buttonNB = new JButton("Notizblock");
+		menuLeiste.add(buttonNB);
 		
 		
 		JButton buttonK = new JButton("Kalender");
 		menuLeiste.add(buttonK);
 		
+		//JPanel HauptSeite
 		JPanel panelHauptSeite = new JPanel();
-		getContentPane().add(panelHauptSeite, BorderLayout.CENTER);
+		panel.add(panelHauptSeite);
 		panelHauptSeite.setBackground(Color.blue);
 		
+		
+		
+		//JPanel Notitzblock
 		JPanel panelNotizBlock = new JPanel();
-		getContentPane().add(panelNotizBlock, BorderLayout.CENTER);
+		panel.add(panelNotizBlock);
 		panelNotizBlock.setBackground(Color.yellow);
 		
+		//JPanel Kalender
 		JPanel panelKalender = new JPanel();
-		getContentPane().add(panelKalender, BorderLayout.CENTER);
-		panelNotizBlock.setBackground(Color.green);
+		panel.add(panelKalender);
+		panelKalender.setBackground(Color.green);
 		
+		//Action Notizblock
 		buttonNB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panelNotizBlock.setVisible(true);
+				panel.removeAll();
+				panel.add(panelNotizBlock, BorderLayout.CENTER);
+				panel.updateUI();
 			}
 		});
 		
+		
+		//Action Hauptseite
 		buttonHS.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panelHauptSeite.setVisible(true);
+				panel.removeAll();
+				panel.add(panelHauptSeite, BorderLayout.CENTER);
+				panel.updateUI();
 			}
 		});
-		buttonHS.addActionListener(new ActionListener() {
+		
+		
+		//Action kalender
+		buttonK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panelKalender.setVisible(true);
+				panel.removeAll();
+				panel.add(panelKalender, BorderLayout.CENTER);
+				panel.updateUI();
 			}
 		});
 	}
