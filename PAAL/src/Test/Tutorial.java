@@ -20,7 +20,11 @@ public class Tutorial extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
+<<<<<<< HEAD
 		//Layout Children können ins Layout inportiert werden.
+=======
+		//Layout Children können in das Layout inportiert werden XY
+>>>>>>> a971f680f63425b17dc4e6c37427b34635e269b1
 		Container pane = getContentPane();
 		GroupLayout gl = new GroupLayout(pane);
 		pane.setLayout(gl);
