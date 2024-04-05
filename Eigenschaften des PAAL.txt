@@ -1,0 +1,11 @@
+PAAL bietet folgende Kernfunktionen:
+
+-Statistik Tracking: Erfasst Lernzeiten und analysiert Lerngewohnheiten.
+-Personalisierte Lernpläne: Passt Lerninhalte anhand des Kalenders und der Vorlieben des Nutzers an.
+-Erweiterbarkeit: Grundfunktionen können um zusätzliche Features ergänzt werden.
+-Benutzerfreundlichkeit: Einfache und intuitive Bedienung.
+-Datenschutz: Sicherer Umgang mit Nutzerdaten.
+-Feedback-System: Nutzer können Rückmeldungen geben, die zur Verbesserung beitragen.
+-Integration: Möglichkeit zur Einbindung in andere Bildungssysteme.
+-Zugänglichkeit: Verwendung über verschiedene Geräte hinweg.
+-Automatische Anpassung: Lernpläne werden basierend auf Nutzerfortschritt aktualisiert.
